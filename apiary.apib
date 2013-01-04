@@ -16,10 +16,14 @@ GET /index/list
 jackpot30-remoting-example-data
 
 
-List all known indexes.
-GET /index/symbol/search?path=jackpot30-remoting-example-data&prefix=Class
+List all classes with the given prefix.
+GET /index/type/search?path=jackpot30-remoting-example-data&prefix=Class
 > Accept: text/plain
 < 200
 < Content-Type: text/plain
-example
+{
+    "example/src/": [
+        "org.netbeans.modules.jackpot30.example.ClassA"
+    ]
+}
 

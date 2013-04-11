@@ -4,7 +4,6 @@ public class SubClassA extends ClassA {
 
     @Override
     public void method() {
-        super.method();
     }
 
 }

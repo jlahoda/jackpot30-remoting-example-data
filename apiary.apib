@@ -13,13 +13,24 @@ GET /index/list
 > Accept: text/plain
 < 200
 < Content-Type: text/plain
-example
+jackpot30-remoting-example-data:Jackpot 3.0 Remoting Example Data
 
 
-List all known indexes.
-GET /index/symbol/search?path=netbeans-indexing&prefix=addImports
+List all classes with the given prefix.
+GET /index/type/search{?path,prefix}
 > Accept: text/plain
 < 200
 < Content-Type: text/plain
-example
+
+
+List all classes whose simple name starts with "Class"
+GET /index/type/search?path=jackpot30-remoting-example-data&prefix=Class
+> Accept: text/plain
+< 200
+< Content-Type: text/plain
+{
+    "example/src/": [
+        "org.netbeans.modules.jackpot30.example.ClassA"
+    ]
+}
 
